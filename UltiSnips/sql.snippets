@@ -1,7 +1,7 @@
 snippet dropt "Drop table" b
 	IF EXISTS(SELECT * FROM sysobjects WHERE id = OBJECT_ID('${1:Schema}.${2:Table_name}')) 
 	BEGIN 
-		PRINT 'Dropping table {$1}.{$2}...'
-		DROP TABLE {$1}.{$2};
+		PRINT 'Dropping table $1.$2...'
+		DROP TABLE $1.$2;
 	END 
 endsnippet
