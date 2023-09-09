@@ -1,0 +1,17 @@
+global !p
+def math():
+  return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+snippet "([^a-zA-Z])trigger" "Expands if 'trigger' is typed after characters other than a-z or A-Z" r
+`!p snip.rv = match.group(1)`snippet body
+endsnippet
+
+snippet "(^|[^a-zA-Z])trigger" "Expands on a new line or after characters other than a-z or A-Z" r
+`!p snip.rv = match.group(1)`snippet body
+endsnippet
+
+# This trigger suppresses numbers, too
+snippet "(^|[\W])trigger" "Expands on a new line or after characters other than 0-9, a-z, or A-Z" r
+`!p snip.rv = match.group(1)`snippet body
+endsnippet
