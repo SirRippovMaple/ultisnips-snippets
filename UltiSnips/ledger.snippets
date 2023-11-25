@@ -1,0 +1,18 @@
+snippet salary "Salary" b
+$1-$2-$3 Earnings Statement $20  ; type: salary
+    income:salary                          \$-$6
+    expenses:insurance:dental                  \$$7
+    transfer:hsa:$1$2$4                      \$$8
+    expenses:insurance:medical                \$$9
+    transfer:retirement:fidelity:$1$2$4     \$$10
+    expenses:insurance:vision                  \$$11
+    expenses:taxes:social-security           \$$12
+    expenses:taxes:medicare                  \$$13
+    expenses:taxes:federal:$1             \$$14
+    expenses:taxes:indiana:$1              \$$15
+    expenses:taxes:county-41:$1             \$$16
+    transfer:salary:$1$2$4                 \$$17
+    transfer:espp:$1$5                    \$$18
+    income:retirement-employee-match        \$-$19
+    transfer:retirement:fidelity:$1$2$4     \$$19
+endsnippet
